@@ -39,5 +39,5 @@ def post(request):
     email_obj.attach(filename, xls_file.file.getvalue(), 'application/vnd.ms-excel')
     email_obj.send()
 
-    return Response({"Email sent to":email})
+    return Response(f'Email sent to: {email}')
 
