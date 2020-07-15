@@ -1,0 +1,1 @@
+web: gunicorn quantsite.wsgi --log-file -
