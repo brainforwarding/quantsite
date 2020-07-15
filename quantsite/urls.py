@@ -21,7 +21,8 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/',include(router.urls)),
+    path('',include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('quantsite',views.index),
+    path('quantsite/',views.index),
+    path('quantsite/send/',views.post),
 ]

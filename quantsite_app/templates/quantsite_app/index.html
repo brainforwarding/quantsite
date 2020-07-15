@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 	<!-- font-awesome -->
     <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+    <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
     
     <!-- AOS -->
     <link rel="stylesheet" href="{% static 'css/aos.css' %}">
@@ -160,15 +162,15 @@
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <form>
+                    <form enctype="multipart/form-data" id="myform">
                     	<div class="row">
 	                        <div class="form-group col-md-6">
 	                            <label for="name">Tu nombre</label>
 	                            <input type="name" class="form-control" id="name">
 	                        </div>
 	                        <div class="form-group col-md-6">
-	                            <label for="Email">Tu email</label>
-	                            <input type="email" class="form-control" id="Email">
+	                            <label for="email">Tu email</label>
+	                            <input type="email" class="form-control" id="email">
 	                        </div>
 	                    </div>
 	                    <div class="form-group">
@@ -176,10 +178,10 @@
 	                        <textarea class="form-control" id="message" rows="3"></textarea>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="File">Seleccione Archivo</label>
-                            <input type="file" class="form-control" id="File">
+                            <label for="xls_file">Seleccione Archivo</label>
+                            <input type="file" class="form-control" id="xls_file">
                         </div>
-                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Enviar</button>
+                        <button type="submit" id="btn" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -242,6 +244,35 @@
     <script>
       AOS.init({
       });
+    </script>
+    <script type="text/javascript">
+    $(document).on("click",'#btn',function(e){
+    e.preventDefault();
+    var data = new FormData($('#myform')[0]);
+    var fileInput = document.getElementById('xls_file');
+    var filename = fileInput.files[0].name;
+    data.append('name',$('#name').val());
+    data.append('email', $('#email').val());
+    data.append('message',$('#message').val());
+    data.append('f_name',filename);
+    data.append('xls_file',fileInput.files[0]);
+    
+        $.ajax({
+            type: 'POST',
+            url: '/quantsite/send/',
+            processData: false,
+            enctype:'multipart/form-data',
+            processData: false,
+            contentType: false,
+            data: data,
+            success: function(response) {
+                console.log(response);
+        },
+        error: function() {
+            console.log("error");
+        }
+            });
+    });
     </script>
 </body>
 
