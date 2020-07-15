@@ -247,8 +247,8 @@
     </script>
     <script type="text/javascript">
     $(document).on("click",'#btn',function(e){
-    str1 = "Sending email to: "
-    alert(str1.concat($("#email").val()));
+    $("#btn").html("Procesando.....");
+    $('#btn').prop('disabled', true);
     e.preventDefault();
     var data = new FormData($('#myform')[0]);
     var fileInput = document.getElementById('xls_file');
@@ -268,8 +268,10 @@
             contentType: false,
             data: data,
             success: function(response) {
-                alert(response);
+                alert(response)
                 $('#myform')[0].reset();
+                $("#btn").html("Enviar");
+                $("#btn").prop('disabled',false);
         },
         error: function() {
             console.log("error");
