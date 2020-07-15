@@ -10,7 +10,7 @@ from django.core.mail import EmailMessage
 import base64
 import openpyxl
 
-@api_view(['GET'])
+
 def index(request):
     template = loader.get_template("quantsite_app/index.html")
     return HttpResponse(template.render())
