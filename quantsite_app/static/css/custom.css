@@ -86,15 +86,20 @@ button {
 .feature img {
     width: 100%;
     max-width: 480px;
+    overflow-x: hidden;
+
 }
 
 #feature-first {
     background: linear-gradient(168deg, #ffffff 55%, #41B8EA 0); 
+    overflow-x: hidden;
+
 }
 
 #feature-last {
     background: #41B8EA;
     /*background: #00FFAD;*/
+    overflow-x: hidden;
 }
 
 /********** price table **********/
