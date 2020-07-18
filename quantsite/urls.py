@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
     path('quantsite/send/',views.post),
+    path('faqs',views.faqs)
 ]

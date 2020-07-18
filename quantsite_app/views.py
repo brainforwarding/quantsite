@@ -41,3 +41,6 @@ def post(request):
 
     return Response(f'Email sent to: {email}')
 
+def faqs(request):
+    template = loader.get_template("quantsite_app/faqs.html")
+    return HttpResponse(template.render())

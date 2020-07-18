@@ -1,0 +1,114 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Preguntas Frecuentes</title>
+    <link rel="icon" href="{% static 'img/favicon.png' %}" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<!-- font-awesome -->
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/matd_expandlist.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/matd_expandlist.min.js' %}"></script>
+
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid" id="banner">
+        <div class="container text-center text-md-left">
+            <header>
+                <div class="row justify-content-between">
+                    <div class="col-2">
+                       <a href="/"> <img src="{% static 'img/logo.png' %}" alt="logo"></a>
+                    </div>
+                    <div class="col-6 align-self-center text-right">
+                        <a href="/" class="text-black lead">Volver al inicio</a>
+                    </div>
+                </div>
+            </header>
+            <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-3 text-black font-weight-bold my-5">
+            	Preguntas <br>
+            	Frecuentes
+            </h1>
+            <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-black my-4">
+                Diseñar un buen horario para tu escuela requiere creatividad y matemáticas. 
+                <br> Dedica tus energías a imaginar las posibilidades. Deja que las matemáticas las resuelva <b>Edugami</b>.
+            </p>
+            <div>&nbsp<br>&nbsp<br>&nbsp</div>
+        </div>
+    </div>
+<div style="justify-content:center;width:45%; margin:auto;border-style: ridge; margin-top:20px; margin-bottom: 50px; border-radius: 10px;">
+    <div style="padding:10px; margin-left: 10px; font-size: large; font-weight: 500;">Preguntas relacionades</div>
+    <div class="ex_inner">
+            <div class="ex_row_frame" style="${override_css}" aria-expanded="false">
+                <div class="ex_hdr_cont flex-base justify-center flex-align-items-cntr" tabindex="0" role="button" aria-expanded="false" id="faqs",style="border-radius: 50%;">
+                    <div class="ex_headings flex-base">
+                        <p class="marg_z_block typograph ex_head">${heading}</p>
+                    </div>
+                    <div class="ex_svg_cont" tabindex="-1" role="button" aria-hidden="true">
+                        <span class="svg_ctrl"><svg class="svg_style" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></span><span class="svg_frame"></span>
+                    </div>
+                </div>
+                <div class="ex_det_con" aria-hidden="true">
+                    <div class="flex-base">
+                        <div class="w_100p">
+                            <div class="flex-base det_pad">
+                                <p class="marg_z_block typograph">${details}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+    </div>
+</div>
+<div class="jumbotron jumbotron-fluid" id="copyright">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-6 text-white align-self-center text-center text-md-left my-2">
+                Edugami ©. Creado con &hearts; por ExploraSchools. 2020 
+            </div>
+            <!-- <div class="col-md-6 align-self-center text-center text-md-right my-2" id="social-media">
+                <a href="#" class="d-inline-block text-center ml-2">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="d-inline-block text-center ml-2">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="d-inline-block text-center ml-2">
+                    <i class="fa fa-medium" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="d-inline-block text-center ml-2">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </div> -->
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+ $('#faqs').matd_expandlist({"list":[
+	{"heading":"¿Qué hora es en chile rn?",
+        "details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
+        {"heading":"¿Chile tiene horario de verano?",
+		"details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
+	{"heading":"¿Qué hora es en Chile?",
+        "details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
+        {"heading":"¿Por qué es la diferencia horaria de Chile?",
+		"details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
+	{"heading":"¿Es invierno en Chile ahora?",
+        "details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
+    	{"heading":"¿Qué hora es en chile rn?",
+        "details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
+        {"heading":"¿Chile tiene horario de verano?",
+		"details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
+	{"heading":"¿Qué hora es en Chile?",
+        "details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
+        {"heading":"¿Por qué es la diferencia horaria de Chile?",
+		"details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."},
+	{"heading":"¿Es invierno en Chile ahora?",
+		"details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."}
+        
+	]});
+</script>
