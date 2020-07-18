@@ -497,24 +497,39 @@ button {
     #banner {
         background-image: url("/static/img/bk-1920.jpg");
     }
+    #bannerqa {
+        background-image: url("/static/img/bk-qa-1920.jpg");
+    }
 }
 @media (max-width: 1594px){
     #banner {
         background-image: url("/static/img/bk-1594.jpg");
+    }
+    #bannerqa {
+        background-image: url("/static/img/bk-qa-1594.jpg");
     }
 }
 @media (max-width: 1366px){
     #banner{
         background-image: url("/static/img/bk-1366.jpg");
     }
+    #bannerqa{
+        background-image: url("/static/img/bk-qa-1366.jpg");
+    }
 }
 @media (max-width: 1280px){
     #banner{
         background-image: url("/static/img/bk-1280.jpg");
     }
+    #bannerqa{
+        background-image: url("/static/img/bk-qa-1280.jpg");
+    }
 }
 @media (max-width: 1152px){
     #banner{
         background-image: url("/static/img/bk-1152.jpg");
+    }
+    #bannerqa{
+        background-image: url("/static/img/bk-qa-1152.jpg");
     }
 }
