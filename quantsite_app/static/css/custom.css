@@ -316,7 +316,7 @@ button {
 }
 
 .ex_row_frame[aria-expanded=true] {
-    margin: 0px 0px 16px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 .ex_row_frame:first-child {
