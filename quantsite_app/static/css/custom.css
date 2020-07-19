@@ -373,7 +373,7 @@ button {
 
 .ex_head {
     font-size: 0.9375rem;
-    flex-basis: 33.33%;
+    flex-basis: 80%;
     flex-shrink: 0;
 }
 
