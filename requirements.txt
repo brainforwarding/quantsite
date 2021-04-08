@@ -1,4 +1,4 @@
-Django==2.2.3
+Django==2.2.20
 django-codemirror-widget==0.5.0
 django-cors-headers==3.1.1
 django-group-by==0.3.1
